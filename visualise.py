@@ -12,6 +12,9 @@ path = '/content/drive/My Drive/finding-houses/'
 sys.path.insert(0, path)
 from helper_functions import *
 
+# Set parameters for saving images.
+img_params = dict(dpi=300, bbox_inches='tight', transparent=True, pad_inches=0)
+
 # DATA -------------------------------------------------------------------------
 
 # Load input image, label image, predictions, in-training metric values.
@@ -50,20 +53,20 @@ axes[3].imshow(y[:256, :, 0])
 axes[3].set_title('Label')
 [ax.axis('off') for ax in axes]
 plt.tight_layout()
-plt.savefig(path+'predictions/valid_comparison.png', dpi=300)
+plt.savefig(path+'predictions/valid_comparison.png', **img_params)
 
 # Show predictions (probabilities) on whole input image.
 plt.imshow(yhat[:, :, 0])
 plt.axis('off')
 plt.colorbar()
-plt.savefig(path+'predictions/train_valid_proba.png', dpi=300)
+plt.savefig(path+'predictions/train_valid_proba.png', **img_params)
 
 # Show predictions (binary) on whole input image.
 plt.imshow(yhat[:, :, 0]>0.5)
 plt.axis('off')
-plt.savefig(path+'predictions/train_valid_binary_rgb.png', dpi=300)
+plt.savefig(path+'predictions/train_valid_binary_rgb.png', **img_params)
 
 # Show predictions (binary, black and white) on whole input image.
 plt.imshow(yhat[:, :, 0]>0.5, cmap='Greys')
 plt.axis('off')
-plt.savefig(path+'predictions/train_valid_binary_bw.png', dpi=300)
+plt.savefig(path+'predictions/train_valid_binary_bw.png', **img_params)

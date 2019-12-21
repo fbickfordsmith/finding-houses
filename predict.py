@@ -8,7 +8,7 @@ from tensorflow.keras.preprocessing.image import load_img
 # Set base filepath. Import helper functions.
 path = '/content/drive/My Drive/finding-houses/'
 sys.path.insert(0, path)
-from helper_functions import *
+from helper_functions import * 
 
 # DATA -------------------------------------------------------------------------
 

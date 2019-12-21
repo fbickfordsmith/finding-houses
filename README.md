@@ -2,6 +2,13 @@
 Freddie Bickford Smith\
 December 2019
 
+
+## Results
+Below is a trained network's predictions on an image section not seen during training. Predictions for the whole input image (ie, both training and validation sections) are at `predictions/train_valid_[image-style].png`.
+
+![](/predictions/valid_comparison.png)
+
+
 ## Repository guide
 
 File|What it does

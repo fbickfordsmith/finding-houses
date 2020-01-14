@@ -14,7 +14,7 @@ Below is a trained network's predictions on an image section not seen during tra
 File|What it does
 -|-
 `task.pdf`|Defines task
-`train_predict_visualise.ipynb`|Shows workflow (converted from `.ipynb`)
+`train_predict_visualise.ipynb`|Shows workflow
 `train.py`|Trains network to find houses
 `predict.py`|Computes predictions with trained network
 `visualise.py`|Visualises training and predictions
